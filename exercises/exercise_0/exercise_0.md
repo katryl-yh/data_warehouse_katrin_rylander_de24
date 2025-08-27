@@ -1,4 +1,33 @@
-### 1. How much does it cost?
+### 0. Google queries
+
+Go into marketplace under data products in snowsight. Search and get the following dataset `Google Keywords search dataset - discover all searches on Google`.
+
+Now create a worksheet on your local repository and start querying this data through snowsql.
+
+&nbsp; a) Use this database and find out the underlying schemas, tables and views to get an overview of its logical structure.
+
+&nbsp; b) Find out the columns and its data types in the table `GOOGLE_KEYWORDS`.
+
+We will now do some exploratory data analysis (EDA) of this dataset.
+
+&nbsp; c) Find out number of rows in the dataset.
+
+&nbsp; d) When is the first search and when is the latest search in the dataset?
+
+&nbsp; e) Which are the 10 most popular keywords?
+
+&nbsp; f) How many unique keywords are there?
+
+&nbsp; g) Check what type of platforms are used and how many users per platform
+
+&nbsp; h) Let's dive into what swedish people are searching. Go into [worldbanks country codes](https://wits.worldbank.org/wits/wits/witshelp/content/codes/country_codes.htm) to find out the country code for Sweden. Find the 20 most popular keywords and the number of searches of that keyword.
+
+&nbsp; i) Lets see how popular spotify is around the world. List the top 10 number countries and the number of searches for spotify. 
+
+&nbsp; j) Feel free to do additional explorations of this dataset.
+
+
+
 - Snowflake edition: Enterprise
 - Cloud provider Azure
 - Region West Europe (Netherlands)
