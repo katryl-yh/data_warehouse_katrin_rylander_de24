@@ -1,10 +1,8 @@
 # dlt
 **/.dlt/ 
 
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[codz]
-*$py.class
+# create user not to be tracked for security reasons
+**/create_user_sf.sql
 
 # C extensions
 *.so

@@ -2,9 +2,7 @@
 USE ROLE USERADMIN;
 
 -- create dlt user
-CREATE USER IF NOT EXISTS extract_loader
-    PASSWORD='a123' -- create a password and fill in here
-    DEFAULT_WAREHOUSE = COMPUTE_WH;
+
 
 -- create dlt role
 CREATE ROLE IF NOT EXISTS movies_dlt_role;
