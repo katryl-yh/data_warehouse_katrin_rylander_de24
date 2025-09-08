@@ -1,7 +1,7 @@
 -- NOTE: you should place the create user part 
 -- in a separate file and .gitignore it as it contains credentials
 
-
+USE ROLE ACCOUNTADMIN;
 -- create dlt user and dlt role 
 USE ROLE USERADMIN;
 
