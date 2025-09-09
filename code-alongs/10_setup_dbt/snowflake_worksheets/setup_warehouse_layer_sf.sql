@@ -14,6 +14,7 @@ USE ROLE securityadmin;
 GRANT ROLE job_ads_dlt_role TO ROLE job_ads_dbt_role;
 
 SHOW GRANTS TO ROLE job_ads_dbt_role; --privileges and roles granted to this role, for existing objects
+SHOW GRANTS TO ROLE job_ads_dlt_role;
 SHOW GRANTS OF ROLE job_ads_dbt_role; --users granted this role
 
 GRANT USAGE,
@@ -40,8 +41,14 @@ SELECT * FROM job_ads.staging.job_ads LIMIT 10;
 
 SHOW GRANTS ON SCHEMA job_ads.warehouse;
 
-USE SCHEMA job_ads.warehouse;
-CREATE TABLE test (id INTEGER);
+USE SCHEMA job_ads.staging;
+CREATE TABLE test_1 (id INTEGER);
+
+SELECT * FROM test_1;
+INSERT INTO test_1 (id) VALUES (1), (2), (3);
+SELECT * FROM test_1;
 SHOW TABLES;
 SHOW GRANTS TO ROLE job_ads_dbt_role; --privileges and roles granted to this role, for existing objects
 DROP TABLE TEST;
+
+SHOW GRANTS TO USER transformer; --privileges and roles granted to this user
