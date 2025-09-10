@@ -1,0 +1,7 @@
+sources:
+  - name: job_ads
+    schema: staging
+    tables:
+      - name: stg_ads
+        identifier: job_ads # updated to match your new DLT script's table name
+# we store names in a separate file to be able to reference them in models, to avoid hardcoding them in multiple places

@@ -4,6 +4,8 @@
 # create user not to be tracked for security reasons
 **/create_user_sf.sql
 **/setup_user_sf.sql
+**/create_dlt_user_sf.sql
+**/create_dbt_user_sf.sql
 
 # profiles not to be tracked for security reasons
 **/profiles.yml
