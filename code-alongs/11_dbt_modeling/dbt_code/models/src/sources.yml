@@ -1,0 +1,7 @@
+sources:
+  - name: job_ads
+    schema: staging
+    tables:
+      - name: stg_ads
+        identifier: technical_field_job_ads # the actual table name in the database
+# we store names in a separate file to be able to reference them in models, to avoid hardcoding them in multiple places
