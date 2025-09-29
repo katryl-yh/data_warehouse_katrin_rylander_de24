@@ -16,6 +16,7 @@ import os
 db_path = str(Path(__file__).parents[1] / "data_warehouse" / "job_ads.duckdb")
 print(db_path)
 
+
 def _get_ads(url_for_search, params):
     headers = {"accept": "application/json"}
     response = requests.get(url_for_search, headers=headers, params=params)
@@ -34,9 +35,12 @@ def jobads_resource(params):
 
 
 def run_pipeline(table_name):
+    # Ensure the directory exists
+    os.makedirs(os.path.dirname(db_path), exist_ok=True)
+    
     pipeline = dlt.pipeline(
-        pipeline_name="jobsearch",
-        destination=dlt.destinations.duckdb(db_path=db_path), # update destination
+        pipeline_name="jobsearch_local",  # Different name to avoid cache conflicts
+        destination=dlt.destinations.duckdb(credentials=db_path),  # Use credentials instead of db_path
         dataset_name="staging",
     )
 
